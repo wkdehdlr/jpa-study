@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d960bc51-1934-4ef3-b916-f1aa6263cfcb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JpaMain.java" afterDir="false" />
     </list>
@@ -40,6 +39,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="ignore_missing_gitignore" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -82,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1583646607523</updated>
       <workItem from="1583646609207" duration="10000" />
-      <workItem from="1583646621860" duration="6753000" />
+      <workItem from="1583646621860" duration="7008000" />
     </task>
     <task id="LOCAL-00001" summary="* JPA 구동 방식&#10;    * 1. 설정 정보 조회&#10;        * META-INF/persistence.xml&#10;    * 2. 생성&#10;        * EntityManagerFactory&#10;    * 3. 생성&#10;        * EntityManager&#10;&#10;&#10;* 어플리케이션 개발&#10;    * @Id&#10;        * 최소한 JPA 한테 PK가 뭔지는 알려줘야함&#10;    * EntityManagerFactory는 어플리케이션 로딩시점에 딱 하나만 만든다&#10;    * 실제 트랜잭션단위마다 EntityManager를 만들어야함&#10;    * JPA 모든 데이터변경은 트랜잭션안에서 처리되어야 한다.&#10;&#10;&#10;* JPQL&#10;    * 테이블이 아닌 객체를 대상으로 검색하는 객체지향쿼리&#10;    * JPQL은 엔티티 객체를 대상으로 쿼리&#10;    * 테이블을 대상으로 쿼리를 짜지 않는다.&#10;    * 엔티티를 대상으로 쿼리를 만든다.">
       <created>1583653048254</created>
@@ -98,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583654282994</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="* 1차캐시에서 조회">
+      <created>1583654585373</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583654585373</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,7 +114,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="* JPA 구동 방식&#10;    * 1. 설정 정보 조회&#10;        * META-INF/persistence.xml&#10;    * 2. 생성&#10;        * EntityManagerFactory&#10;    * 3. 생성&#10;        * EntityManager&#10;&#10;&#10;* 어플리케이션 개발&#10;    * @Id&#10;        * 최소한 JPA 한테 PK가 뭔지는 알려줘야함&#10;    * EntityManagerFactory는 어플리케이션 로딩시점에 딱 하나만 만든다&#10;    * 실제 트랜잭션단위마다 EntityManager를 만들어야함&#10;    * JPA 모든 데이터변경은 트랜잭션안에서 처리되어야 한다.&#10;&#10;&#10;* JPQL&#10;    * 테이블이 아닌 객체를 대상으로 검색하는 객체지향쿼리&#10;    * JPQL은 엔티티 객체를 대상으로 쿼리&#10;    * 테이블을 대상으로 쿼리를 짜지 않는다.&#10;    * 엔티티를 대상으로 쿼리를 만든다." />
     <MESSAGE value="* 영속성 컨텍스트&#10;    * 객체와 관계형 데이터베이스 매핑하기&#10;    * 어플리케이션과 데이터베이스 사이에 한 계층이 존재하는것&#10;    * 영속성 컨텍스트&#10;    * Entity 생명주기&#10;        * 비영속(new/transient)&#10;            * 영속성 컨텍스트와 전혀 관계가 없는 새로운 상태&#10;        * 영속(managed)&#10;            * 영속성 컨텍스트에 관리되는 상태&#10;            * 영속상태가 되었다고 해서 바로 디비에 쿼리가 날아가는게 아님(em.persist())&#10;            * 트랜잭션을 커밋하는 시점에 디비에 쿼리가 날아감(tx.commit())&#10;        * 준영속(detached)&#10;            * 영속성 컨텍스트에 저장되었다가 분리된 상태&#10;        * 삭제(removed)&#10;            * 삭제된 상태" />
-    <option name="LAST_COMMIT_MESSAGE" value="* 영속성 컨텍스트&#10;    * 객체와 관계형 데이터베이스 매핑하기&#10;    * 어플리케이션과 데이터베이스 사이에 한 계층이 존재하는것&#10;    * 영속성 컨텍스트&#10;    * Entity 생명주기&#10;        * 비영속(new/transient)&#10;            * 영속성 컨텍스트와 전혀 관계가 없는 새로운 상태&#10;        * 영속(managed)&#10;            * 영속성 컨텍스트에 관리되는 상태&#10;            * 영속상태가 되었다고 해서 바로 디비에 쿼리가 날아가는게 아님(em.persist())&#10;            * 트랜잭션을 커밋하는 시점에 디비에 쿼리가 날아감(tx.commit())&#10;        * 준영속(detached)&#10;            * 영속성 컨텍스트에 저장되었다가 분리된 상태&#10;        * 삭제(removed)&#10;            * 삭제된 상태" />
+    <MESSAGE value="* 1차캐시에서 조회" />
+    <option name="LAST_COMMIT_MESSAGE" value="* 1차캐시에서 조회" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -119,10 +127,10 @@
       <screen x="0" y="23" width="1751" height="1097" />
     </state>
     <state x="1125" y="23" key="#com.intellij.ide.util.MemberChooser/0.23.1751.1097@0.23.1751.1097" timestamp="1583650912915" />
-    <state x="894" y="23" key="CommitChangelistDialog2" timestamp="1583654282910">
+    <state x="894" y="23" key="CommitChangelistDialog2" timestamp="1583654781476">
       <screen x="0" y="23" width="1751" height="1097" />
     </state>
-    <state x="894" y="23" key="CommitChangelistDialog2/0.23.1751.1097@0.23.1751.1097" timestamp="1583654282910" />
+    <state x="894" y="23" key="CommitChangelistDialog2/0.23.1751.1097@0.23.1751.1097" timestamp="1583654781476" />
     <state width="833" height="184" key="GridCell.Tab.0.bottom" timestamp="1583654531214">
       <screen x="0" y="23" width="1751" height="1097" />
     </state>
@@ -139,9 +147,9 @@
       <screen x="0" y="23" width="1751" height="1097" />
     </state>
     <state width="833" height="184" key="GridCell.Tab.0.right/0.23.1751.1097@0.23.1751.1097" timestamp="1583654531214" />
-    <state x="912" y="23" key="Vcs.Push.Dialog.v2" timestamp="1583654324359">
+    <state x="912" y="23" key="Vcs.Push.Dialog.v2" timestamp="1583654593422">
       <screen x="0" y="23" width="1751" height="1097" />
     </state>
-    <state x="912" y="23" key="Vcs.Push.Dialog.v2/0.23.1751.1097@0.23.1751.1097" timestamp="1583654324359" />
+    <state x="912" y="23" key="Vcs.Push.Dialog.v2/0.23.1751.1097@0.23.1751.1097" timestamp="1583654593422" />
   </component>
 </project>
