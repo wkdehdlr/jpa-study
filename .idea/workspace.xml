@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d960bc51-1934-4ef3-b916-f1aa6263cfcb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex1-hello-jpa.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/JpaMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/JpaMain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Member.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JpaMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +37,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -89,12 +82,25 @@
       <option name="presentableId" value="Default" />
       <updated>1583646607523</updated>
       <workItem from="1583646609207" duration="10000" />
-      <workItem from="1583646621860" duration="5282000" />
+      <workItem from="1583646621860" duration="6491000" />
     </task>
+    <task id="LOCAL-00001" summary="* JPA 구동 방식&#10;    * 1. 설정 정보 조회&#10;        * META-INF/persistence.xml&#10;    * 2. 생성&#10;        * EntityManagerFactory&#10;    * 3. 생성&#10;        * EntityManager&#10;&#10;&#10;* 어플리케이션 개발&#10;    * @Id&#10;        * 최소한 JPA 한테 PK가 뭔지는 알려줘야함&#10;    * EntityManagerFactory는 어플리케이션 로딩시점에 딱 하나만 만든다&#10;    * 실제 트랜잭션단위마다 EntityManager를 만들어야함&#10;    * JPA 모든 데이터변경은 트랜잭션안에서 처리되어야 한다.&#10;&#10;&#10;* JPQL&#10;    * 테이블이 아닌 객체를 대상으로 검색하는 객체지향쿼리&#10;    * JPQL은 엔티티 객체를 대상으로 쿼리&#10;    * 테이블을 대상으로 쿼리를 짜지 않는다.&#10;    * 엔티티를 대상으로 쿼리를 만든다.">
+      <created>1583653048254</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583653048254</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="* JPA 구동 방식&#10;    * 1. 설정 정보 조회&#10;        * META-INF/persistence.xml&#10;    * 2. 생성&#10;        * EntityManagerFactory&#10;    * 3. 생성&#10;        * EntityManager&#10;&#10;&#10;* 어플리케이션 개발&#10;    * @Id&#10;        * 최소한 JPA 한테 PK가 뭔지는 알려줘야함&#10;    * EntityManagerFactory는 어플리케이션 로딩시점에 딱 하나만 만든다&#10;    * 실제 트랜잭션단위마다 EntityManager를 만들어야함&#10;    * JPA 모든 데이터변경은 트랜잭션안에서 처리되어야 한다.&#10;&#10;&#10;* JPQL&#10;    * 테이블이 아닌 객체를 대상으로 검색하는 객체지향쿼리&#10;    * JPQL은 엔티티 객체를 대상으로 쿼리&#10;    * 테이블을 대상으로 쿼리를 짜지 않는다.&#10;    * 엔티티를 대상으로 쿼리를 만든다." />
+    <option name="LAST_COMMIT_MESSAGE" value="* JPA 구동 방식&#10;    * 1. 설정 정보 조회&#10;        * META-INF/persistence.xml&#10;    * 2. 생성&#10;        * EntityManagerFactory&#10;    * 3. 생성&#10;        * EntityManager&#10;&#10;&#10;* 어플리케이션 개발&#10;    * @Id&#10;        * 최소한 JPA 한테 PK가 뭔지는 알려줘야함&#10;    * EntityManagerFactory는 어플리케이션 로딩시점에 딱 하나만 만든다&#10;    * 실제 트랜잭션단위마다 EntityManager를 만들어야함&#10;    * JPA 모든 데이터변경은 트랜잭션안에서 처리되어야 한다.&#10;&#10;&#10;* JPQL&#10;    * 테이블이 아닌 객체를 대상으로 검색하는 객체지향쿼리&#10;    * JPQL은 엔티티 객체를 대상으로 쿼리&#10;    * 테이블을 대상으로 쿼리를 짜지 않는다.&#10;    * 엔티티를 대상으로 쿼리를 만든다." />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="912" y="23" key="#Project_Structure" timestamp="1583649778905">
@@ -105,6 +111,10 @@
       <screen x="0" y="23" width="1751" height="1097" />
     </state>
     <state x="1125" y="23" key="#com.intellij.ide.util.MemberChooser/0.23.1751.1097@0.23.1751.1097" timestamp="1583650912915" />
+    <state x="894" y="23" key="CommitChangelistDialog2" timestamp="1583654264159">
+      <screen x="0" y="23" width="1751" height="1097" />
+    </state>
+    <state x="894" y="23" key="CommitChangelistDialog2/0.23.1751.1097@0.23.1751.1097" timestamp="1583654264159" />
     <state width="833" height="184" key="GridCell.Tab.0.bottom" timestamp="1583652175697">
       <screen x="0" y="23" width="1751" height="1097" />
     </state>
@@ -121,5 +131,9 @@
       <screen x="0" y="23" width="1751" height="1097" />
     </state>
     <state width="833" height="184" key="GridCell.Tab.0.right/0.23.1751.1097@0.23.1751.1097" timestamp="1583652175696" />
+    <state x="912" y="23" key="Vcs.Push.Dialog.v2" timestamp="1583653131456">
+      <screen x="0" y="23" width="1751" height="1097" />
+    </state>
+    <state x="912" y="23" key="Vcs.Push.Dialog.v2/0.23.1751.1097@0.23.1751.1097" timestamp="1583653131456" />
   </component>
 </project>

@@ -2,7 +2,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
-import java.util.List;
 
 public class JpaMain {
     public static void main(String[] args){
@@ -13,12 +12,15 @@ public class JpaMain {
         tx.begin();
 
         try{
-            List<Member> result = em.createQuery("select m from Member as m", Member.class)
-                    .setFirstResult(5)
-                    .setMaxResults(8)
-                    .getResultList();
-            Member findMember = em.find(Member.class, 1L);
-            findMember.setName("HelloJPA");
+//          비영속
+            Member member = new Member();
+            member.setId(2L);
+            member.setName("HelloDoik");
+
+//          영속(실제 디비에 쿼리가 안날아감)
+            em.persist(member);
+
+//          실제 디비에 쿼리가 날아감
             tx.commit();
         }catch (Exception e){
             tx.rollback();
