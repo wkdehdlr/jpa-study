@@ -12,12 +12,12 @@ public class JpaMain {
         tx.begin();
 
         try{
-//          디비 쿼리 날아감
-            Member member1 = em.find(Member.class, 1L);
+            Member member1 = new Member(3L,"A");
+            Member member2 = new Member(4L,"B");
 
-//          디비 쿼리 안날아감
-//          1차캐시에서 조회
-            Member member2 = em.find(Member.class, 1L);
+            em.persist(member1);
+            em.persist(member2);
+            System.out.println("=============================");
 
             tx.commit();
         }catch (Exception e){
