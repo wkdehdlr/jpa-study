@@ -124,3 +124,9 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+.idea/.gitignore
+.idea/compiler.xml
+.idea/misc.xml
+.idea/vcs.xml
+src/main/java/
+src/test/
