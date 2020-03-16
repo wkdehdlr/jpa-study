@@ -17,13 +17,12 @@ public class JpaMain {
 
             Member member = new Member();
             member.setName("doik");
-            member.setTeamId(team.getId());
+            member.setTeam(team);
             em.persist(member);
 
-            Member findMember = em.find(Member.class, member.getId());
+            Member member1 = em.find(Member.class, member.getId());
+            Team team1 = member1.getTeam();
 
-            Long teamId = findMember.getTeamId();
-            Team team1 = em.find(Team.class, teamId);
 
             tx.commit();
         }catch (Exception e) {
