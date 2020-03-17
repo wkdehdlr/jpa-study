@@ -18,11 +18,13 @@ public class JpaMain {
 
             Member member = new Member();
             member.setName("doik");
-            member.setTeam(team);
+            member.changeTeam(team);
             em.persist(member);
 
-            em.flush();
-            em.clear();
+//            team.getMembers().add(member);
+
+//            em.flush();
+//            em.clear();
 
             Member member1 = em.find(Member.class, member.getId());
             List<Member> members = member1.getTeam().getMembers();
