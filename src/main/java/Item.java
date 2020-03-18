@@ -1,4 +1,6 @@
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "tb_item")
@@ -17,6 +19,9 @@ public class Item {
 
     @Column(name = "stockQuantity")
     private Long stockQuantity;
+
+    @OneToMany(mappedBy = "item")
+    private List<OrderItem> orderItems = new ArrayList<>();
 
     public Item(){
 

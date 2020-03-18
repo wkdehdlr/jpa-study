@@ -9,11 +9,13 @@ public class OrderItem {
     @Column(name = "seq")
     private Long id;
 
-    @Column(name = "seq_order")
-    private Long orderId;
+    @ManyToOne
+    @JoinColumn(name = "seq_order")
+    private Order order;
 
-    @Column(name = "seq_item")
-    private Long itemId;
+    @ManyToOne
+    @JoinColumn(name = "seq_item")
+    private Item item;
 
     @Column(name = "orderPrice")
     private Long orderPrice;
@@ -33,22 +35,6 @@ public class OrderItem {
         this.id = id;
     }
 
-    public Long getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(Long orderId) {
-        this.orderId = orderId;
-    }
-
-    public Long getItemId() {
-        return itemId;
-    }
-
-    public void setItemId(Long itemId) {
-        this.itemId = itemId;
-    }
-
     public Long getOrderPrice() {
         return orderPrice;
     }
@@ -63,5 +49,21 @@ public class OrderItem {
 
     public void setCount(Long count) {
         this.count = count;
+    }
+
+    public Order getOrder() {
+        return order;
+    }
+
+    public void setOrder(Order order) {
+        this.order = order;
+    }
+
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
     }
 }
