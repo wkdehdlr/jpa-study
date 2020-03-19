@@ -1,12 +1,14 @@
 # Jpa-Study
+
 ###JPA 구동 방식
-    * 설정 정보 조회
-        * META-INF/persistence.xml
-    * 생성
-        * EntityManagerFactory
-    * 생성
-        * EntityManager
+- 설정 정보 조회
+    - META-INF/persistence.xml
+- 생성
+    - EntityManagerFactory
+- 생성
+    - EntityManager
 ---
+
 ###어플리케이션 개발
     * @Id
         * 최소한 JPA 한테 PK가 뭔지는 알려줘야함
@@ -14,12 +16,14 @@
     * 실제 트랜잭션단위마다 EntityManager를 만들어야함
     * JPA 모든 데이터변경은 트랜잭션안에서 처리되어야 한다.
 ---
+
 ###JPQL
     * 테이블이 아닌 객체를 대상으로 검색하는 객체지향쿼리
     * JPQL은 엔티티 객체를 대상으로 쿼리
     * 테이블을 대상으로 쿼리를 짜지 않는다.
     * 엔티티를 대상으로 쿼리를 만든다.
 ---
+
 ###영속성 컨텍스트
     * 엔티티 팩토리와 엔티티 매니저
     * 엔티티 팩토리
@@ -102,6 +106,7 @@
     * 테스트 서버는 update 또는 validate
     * 스테이징과 운영 서버는 validate 또는 none
 ---
+
 ###필드와 컬럼 매핑
     * 매핑 어노테이션
         * @Column
