@@ -79,14 +79,13 @@
             - javax.persistence.FlushModeType
                 - FlushModeType.AUTO : 커밋이나 쿼리를 실행할 때 플러시(디폴트)
                 - FlushModeType.COMMIT : 커밋할 때만 플러시
-
-        * 준영속으로 만드는 방법
-            * em.detach(entity)
-                * 특정 엔티티만 준영속 상태로 전환
-            * em.clear()
-                * 영속성 컨텍스트를 완전히 초기화
-            * em.close()
-                * 영속성 컨텍스트를 종료
+        - 준영속으로 만드는 방법
+            - em.detach(entity)
+                - 특정 엔티티만 준영속 상태로 전환
+            - em.clear()
+                - 영속성 컨텍스트를 완전히 초기화
+            - em.close()
+                - 영속성 컨텍스트를 종료
 ---
 ### 엔티티 매핑
 - @Entity
@@ -94,7 +93,7 @@
     - final 클래스, enum, interface, inner 클래스 사용불가
     - 저장할 필드에 final 사용불가
     - 속성 : name
-            * 기본값 : 클래스 이름을 그대로 사용
+        - 기본값 : 클래스 이름을 그대로 사용
 - @Table
     - 엔티티와 매핑할 테이블 지정
     - name : 매핑할 테이블 이름 / 기본값 : 엔티티 이름을 사용
