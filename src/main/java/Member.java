@@ -9,6 +9,10 @@ public class Member {
     @Column(name = "USERNAME")
     private String name;
 
+    @ManyToOne
+    @JoinColumn(name = "id", insertable = false, updatable = false)
+    private Team team;
+
     public Member(){
 
     }
