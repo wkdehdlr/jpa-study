@@ -1,7 +1,7 @@
 import javax.persistence.*;
 
 @Entity
-public class Member {
+public class Member extends BaseEntity{
     @Id
     @GeneratedValue
     private Long id;
@@ -12,6 +12,10 @@ public class Member {
     @ManyToOne
     @JoinColumn(name = "id", insertable = false, updatable = false)
     private Team team;
+
+    @OneToOne
+    @JoinColumn(name = "Locker_id")
+    private Locker locker;
 
     public Member(){
 
