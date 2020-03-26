@@ -10,12 +10,8 @@ public class Member extends BaseEntity{
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "id", insertable = false, updatable = false)
+    @JoinColumn(name = "TEAM_ID")
     private Team team;
-
-    @OneToOne
-    @JoinColumn(name = "Locker_id")
-    private Locker locker;
 
     public Member(){
 
@@ -37,4 +33,11 @@ public class Member extends BaseEntity{
         this.name = name;
     }
 
+    public Team getTeam() {
+        return team;
+    }
+
+    public void setTeam(Team team) {
+        this.team = team;
+    }
 }

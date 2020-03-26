@@ -1,3 +1,5 @@
+import org.hibernate.Hibernate;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -16,10 +18,22 @@ public class JpaMain {
             member.setName("doik");
             em.persist(member);
 
-            Team team = new Team();
-            team.setName("TeamA");
-            team.getMembers().add(member);
-            em.persist(team);
+//            Member member2 = new Member();
+//            member2.setName("doik2");
+//            em.persist(member2);
+
+            em.flush();
+            em.clear();
+
+            Member findMember1 = em.find(Member.class, member.getId());
+            Member findMember2 = em.getReference(Member.class, member.getId());
+//            Member findMember2 = em.getReference(Member.class, member2.getId());
+
+//            Hibernate.initialize(findMember2);
+
+//            System.out.println("m1 == m2" + (findMember1.getClass() == findMember2.getClass()));
+//            System.out.println(findMember2.getClass());
+//            System.out.println("findMember.username = " + findMember2.getName());
 
             tx.commit();
         }catch (Exception e) {
