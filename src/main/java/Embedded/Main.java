@@ -17,11 +17,15 @@ public class Main {
         tx.begin();
         try{
 
-            Member member = new Member();
-            member.setUsername("doik");
-            member.setPeriod(new Period());
+            Address address = new Address("city","1000","street");
 
-            em.persist(member);
+            Member member1 = new Member();
+            member1.setUsername("doik");
+            member1.setHomeAddress(address);
+            em.persist(member1);
+
+            Address address2 = new Address("city2","2000","street2");
+            member1.setHomeAddress(address2);
 
             tx.commit();
         }catch (Exception e) {
