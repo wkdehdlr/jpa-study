@@ -310,6 +310,28 @@
         - org.hibernate.Hibernate.initialize(entity);
     - JPA 표준은 강제 초기화 없음
         - 강제호출 : member.getName()
-    
-        
+---
+### 즉시 로딩과 지연 로딩
+- 지연로딩
+    - FetchType.Lazy
+    - 프록시로 가져옴
+    - 실제 사용하는 시점에 초기화
+- 즉시로딩
+    - FetchType.EAGER
+- 프록시와 즉시로딩 주의
+    - 가급적 지연 로딩만 사용(특히 실무에서)
+        - 일단 다 Lazy로 깔고 필요하면 설정
+    - 즉시 로딩을 적용하면 예상하지 못한 SQL이 발생
+    - 즉시로딩은 JPQL에서 N+1 문제를 일으킨다
+        - 예를 들어 Lazy일 때 find는 내부적으로 최적화가 되어있어서 Member를 find할 때 Team도 join해서 한번에 가져오는 반면 em.createQuery로 select m from Member m 하면
+          createQuery가 스트링 그대로 번역되서 일단 당장 Member만 select하는 쿼리가 나가고 현재 Team이 EAGER니까 team을 채우기 위한 쿼리가 또 나간다
+          member마다 다 다른 team이면 member만큼 team 쿼리가 발생(이게 N+1)
+    - @ManyToOne, @OneToMany는 기본값이 즉시로딩
+    - @OneToMany, @ManyToMany는 기본이 지연로딩
+- 실무 지연 로딩 활용
+    - 모든 연관관계에 지연 로딩을 사용해라
+    - 실무에서 즉시 로딩을 사용하지 마라
+    - JPQL fetch 조인이나, 엔티티 그래프 기능을 사용해라
+    - 즉시 로딩은 상상하지 못한 쿼리가 나간다
 
+ 
