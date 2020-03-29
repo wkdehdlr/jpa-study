@@ -1,20 +1,21 @@
+package hello;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-public class Member extends BaseEntity{
+public class Team extends BaseEntity{
     @Id
     @GeneratedValue
     private Long id;
 
-    @Column(name = "USERNAME")
     private String name;
 
-    @ManyToOne
-    @JoinColumn(name = "TEAM_ID")
-    private Team team;
+    @OneToMany(mappedBy = "team")
+    private List<Member> members = new ArrayList<>();
 
-    public Member(){
-
+    public Team() {
     }
 
     public Long getId() {
@@ -33,11 +34,11 @@ public class Member extends BaseEntity{
         this.name = name;
     }
 
-    public Team getTeam() {
-        return team;
+    public List<Member> getMembers() {
+        return members;
     }
 
-    public void setTeam(Team team) {
-        this.team = team;
+    public void setMembers(List<Member> members) {
+        this.members = members;
     }
 }
