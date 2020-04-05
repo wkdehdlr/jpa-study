@@ -4,6 +4,7 @@
     <list default="true" id="5667d7e5-1a8b-4f00-aabe-589d7a7f25f6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/JPQL/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JPQL/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JPQL/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JPQL/Member.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586077559930</updated>
-      <workItem from="1586077563526" duration="4010000" />
+      <workItem from="1586077563526" duration="5203000" />
     </task>
     <task id="LOCAL-00001" summary="### JPQL&#10;- JPQL은 테이블이 아닌 엔티티를 대상으로 쿼리&#10;- JPQL 문법&#10;    - 엔티티와 속성은 대소문자 구분 O&#10;    - JPQL 키워드는 대소문자 구분 X&#10;    - 엔티티 이름 사용, 테이블 이름 아님&#10;    - **별칭 필수**&#10;    - TypeQuery, Query&#10;        - TypeQuery : 반환 타입이 명확할 때&#10;        - Query : 반환 타입이 명확하지 않을 때&#10;    - 결과 조회 API&#10;        - query.getResultList(): 결과가 하나 이상일 때&#10;            - 결과가 없으면 빈 리스트 반환&#10;        - query.getSingleResult(): 결과가 정확히 하나, 단일 객체 반환&#10;            - 결과가 없으면 : javax.persistence.NoResultException&#10;            - 둘 이상이면 : javax.persistence.NonUniqueResultException">
       <created>1586079297337</created>
@@ -123,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586080915208</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="### 페이징 API&#10;- JPA는 페이징을 다음 두 API로 추상화&#10;- setFirstResult(int startPosition): 조회 시작 위치(0부터 시작)&#10;- setMaxResults(int maxResult) : 조회할 데이터 개수">
+      <created>1586081729101</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1586081729101</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +143,8 @@
     <MESSAGE value="- 엔티티프로젝션&#10; - result는 영속성 컨텍스트로 관리됨" />
     <MESSAGE value="- 여러 값 조회&#10;    - SELECT m.username, m.age FROM Member m&#10;    - 1.Query 타입으로 조회&#10;        - List result&#10;    - 2.Object[] 타입으로 조회&#10;        - List&lt;Object[]&gt; result" />
     <MESSAGE value="    - 3.new 명령어로 조회&#10;        - 단순 값을 DTO로 바로 조회&#10;        - 패키지 명을 포함한 전체 클래스 명 입력&#10;        - 순서와 타입이 일치하는 생성자 필요" />
-    <option name="LAST_COMMIT_MESSAGE" value="    - 3.new 명령어로 조회&#10;        - 단순 값을 DTO로 바로 조회&#10;        - 패키지 명을 포함한 전체 클래스 명 입력&#10;        - 순서와 타입이 일치하는 생성자 필요" />
+    <MESSAGE value="### 페이징 API&#10;- JPA는 페이징을 다음 두 API로 추상화&#10;- setFirstResult(int startPosition): 조회 시작 위치(0부터 시작)&#10;- setMaxResults(int maxResult) : 조회할 데이터 개수" />
+    <option name="LAST_COMMIT_MESSAGE" value="### 페이징 API&#10;- JPA는 페이징을 다음 두 API로 추상화&#10;- setFirstResult(int startPosition): 조회 시작 위치(0부터 시작)&#10;- setMaxResults(int maxResult) : 조회할 데이터 개수" />
   </component>
   <component name="WindowStateProjectService">
     <state x="913" y="237" key="#Project_Structure" timestamp="1586077708669">
@@ -146,10 +155,10 @@
       <screen x="0" y="23" width="1751" height="1097" />
     </state>
     <state x="1126" y="254" key="#com.intellij.ide.util.MemberChooser/0.23.1751.1097@0.23.1751.1097" timestamp="1586080758110" />
-    <state x="857" y="23" key="CommitChangelistDialog2" timestamp="1586080915115">
+    <state x="857" y="23" key="CommitChangelistDialog2" timestamp="1586081729018">
       <screen x="0" y="23" width="1751" height="1097" />
     </state>
-    <state x="857" y="23" key="CommitChangelistDialog2/0.23.1751.1097@0.23.1751.1097" timestamp="1586080915115" />
+    <state x="857" y="23" key="CommitChangelistDialog2/0.23.1751.1097@0.23.1751.1097" timestamp="1586081729018" />
     <state width="834" height="284" key="GridCell.Tab.0.bottom" timestamp="1586079420539">
       <screen x="0" y="23" width="1751" height="1097" />
     </state>
@@ -166,9 +175,9 @@
       <screen x="0" y="23" width="1751" height="1097" />
     </state>
     <state width="834" height="284" key="GridCell.Tab.0.right/0.23.1751.1097@0.23.1751.1097" timestamp="1586079420539" />
-    <state x="913" y="307" key="Vcs.Push.Dialog.v2" timestamp="1586080916881">
+    <state x="913" y="307" key="Vcs.Push.Dialog.v2" timestamp="1586081730831">
       <screen x="0" y="23" width="1751" height="1097" />
     </state>
-    <state x="913" y="307" key="Vcs.Push.Dialog.v2/0.23.1751.1097@0.23.1751.1097" timestamp="1586080916881" />
+    <state x="913" y="307" key="Vcs.Push.Dialog.v2/0.23.1751.1097@0.23.1751.1097" timestamp="1586081730831" />
   </component>
 </project>
