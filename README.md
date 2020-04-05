@@ -484,6 +484,50 @@
             - SELECT m,t FROM Member m LEFT JOIN m.team t ON t.name = 'A'
         - 연관관계 없는 엔티티 외부 조인(하이버네이트 5.1부터)
             - SELECT m,t FROM Member m LEFT JOIN Team t ON m.username = t.name
-    
-
-    
+---
+### 서브쿼리
+- 서브 쿼리 지원 함수
+    - [NOT] EXISTS (subquery) : 서브쿼리에 결과가 존재하면 참
+        - {ALL | ANY | SOME} (subquery)
+        - ALL 모두 만족하면 참
+        - ANY, SOME : 같은 의미, 조건을 하나라도 만족하면 참
+        - SELECT m from Member m where EXISTS (SELECT t FROM m.team t WHERE t.name = '팀A')
+    - [NOT] IN (subquery) : 서브쿼리의 결과 중 하나라도 같은 것이 있으면 참
+- JPA 서브 쿼리 한계
+    - JPA는 WHERE, HAVING 절에서만 서브 쿼리 사용 가능
+    - SELECT 절도 가능(하이버네이트에서 지원)
+    - **FROM 절의 서브 쿼리는 현재 JPQL에서 불가능**
+        - **조인으로 풀 수 있으면 풀어서 해결**
+---
+### JPQL 타입 표현
+- 문자 : 'HELLO','She''s'
+- 숫자 : 10L(Long), 10D(Double), 10F(Float)
+- Boolean : TRUE, FALSE
+- ENUM : JPQL.MemberType.Admin(패키지명 포함)
+- 엔티티타입 : TYPE(m) = Member(상속관계에서 사용)
+- 기타
+    - EXISTS, IN
+    - AND, OR, NOT
+    - =, >, >=, <=, <>
+    - BETWEEN, LIKE, IS NULL
+---
+### 조건식
+- COALESCE : 하나씩 조회해서 null이 아니면 반환
+    - SELECT COALESCE(m.username, '이름 없는 회원') FROM Member m
+- NULLIF : 두 값이 같으면 null 반환, 다르면 첫번째 값 반환
+    - SELECT NULLIF(m.username, '관리자') FROM Member m
+---
+### JPQL 기본함수
+- CONCAT
+- SUBSTRING
+- TRIM
+- LOWER
+- UPPER
+- LENGTH
+- LOCATE
+- ABS, SQRT, MOD
+- SIZE, INDEX(JPA 용도)
+- 사용자 정의 함수
+    - 하이버네이트는 사용전 방언에 추가해야 한다
+    - 사용하는 DB 방언을 상속받고, 사용자 정의 함수를 등록한다
+    - SELECT function('group_contat', m.username) FROM Member m
