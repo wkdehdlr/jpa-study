@@ -14,8 +14,14 @@ public class Main {
             member.setUsername("doik");
             em.persist(member);
 
-            TypedQuery<Member> query = em.createQuery("select m from Member m", Member.class);
-            Query query1 = em.createQuery("select m.username, m.age from Member m");
+//            TypedQuery<Member> query = em.createQuery("select m from Member m", Member.class);
+//            Query query1 = em.createQuery("select m.username, m.age from Member m");
+
+            Member singleResult = em.createQuery("select m from Member m where m.username like :username", Member.class)
+                    .setParameter("username", "doik")
+                    .getSingleResult();
+
+            System.out.println(singleResult.getUsername());
 
 
             tx.commit();
