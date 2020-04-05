@@ -1,21 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5667d7e5-1a8b-4f00-aabe-589d7a7f25f6" name="Default Changelist" comment="" />
+    <list default="true" id="5667d7e5-1a8b-4f00-aabe-589d7a7f25f6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/JPQL/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/JPQL/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/JPQL/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/JPQL/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/JPQL/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/JPQL/Team.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPQL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JPQL.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1a7D62tY6esY9MKfoL2uF2CBkOu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JPQL.Main" />
+      <module name="JPQL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="JPQL.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -39,13 +93,41 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586077559930</updated>
+      <workItem from="1586077563526" duration="1653000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="913" y="237" key="#Project_Structure" timestamp="1586077708669">
       <screen x="0" y="23" width="1751" height="1097" />
     </state>
     <state x="913" y="237" key="#Project_Structure/0.23.1751.1097@0.23.1751.1097" timestamp="1586077708669" />
+    <state x="1126" y="254" key="#com.intellij.ide.util.MemberChooser" timestamp="1586078431175">
+      <screen x="0" y="23" width="1751" height="1097" />
+    </state>
+    <state x="1126" y="254" key="#com.intellij.ide.util.MemberChooser/0.23.1751.1097@0.23.1751.1097" timestamp="1586078431175" />
+    <state width="834" height="284" key="GridCell.Tab.0.bottom" timestamp="1586078543005">
+      <screen x="0" y="23" width="1751" height="1097" />
+    </state>
+    <state width="834" height="284" key="GridCell.Tab.0.bottom/0.23.1751.1097@0.23.1751.1097" timestamp="1586078543005" />
+    <state width="834" height="284" key="GridCell.Tab.0.center" timestamp="1586078543004">
+      <screen x="0" y="23" width="1751" height="1097" />
+    </state>
+    <state width="834" height="284" key="GridCell.Tab.0.center/0.23.1751.1097@0.23.1751.1097" timestamp="1586078543004" />
+    <state width="834" height="284" key="GridCell.Tab.0.left" timestamp="1586078543003">
+      <screen x="0" y="23" width="1751" height="1097" />
+    </state>
+    <state width="834" height="284" key="GridCell.Tab.0.left/0.23.1751.1097@0.23.1751.1097" timestamp="1586078543003" />
+    <state width="834" height="284" key="GridCell.Tab.0.right" timestamp="1586078543004">
+      <screen x="0" y="23" width="1751" height="1097" />
+    </state>
+    <state width="834" height="284" key="GridCell.Tab.0.right/0.23.1751.1097@0.23.1751.1097" timestamp="1586078543004" />
+    <state x="913" y="307" key="Vcs.Push.Dialog.v2" timestamp="1586077861023">
+      <screen x="0" y="23" width="1751" height="1097" />
+    </state>
+    <state x="913" y="307" key="Vcs.Push.Dialog.v2/0.23.1751.1097@0.23.1751.1097" timestamp="1586077861023" />
   </component>
 </project>
