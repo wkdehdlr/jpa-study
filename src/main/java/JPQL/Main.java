@@ -19,11 +19,19 @@ public class Main {
             em.flush();
             em.clear();
 
-            List<Member> result = em.createQuery("select m from Member m", Member.class)
+            List resultList = em.createQuery("select m.address from Order m")
+                    .getResultList();
+            Object o = resultList.get(0);
+            Object[] res = (Object[])o;
+            System.out.println(res[0]);
+            System.out.println(res[1]);
+
+            List<Object[]> resultList2 = em.createQuery("select m.address from Order m")
                     .getResultList();
 
-            Member findMember = result.get(0);
-            findMember.setAge(20);
+            Object[] result = resultList2.get(0);
+            System.out.println(result[0]);
+            System.out.println(result[1]);
 
             tx.commit();
         }catch (Exception e){
