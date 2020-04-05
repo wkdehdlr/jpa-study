@@ -1,6 +1,7 @@
 package JPQL;
 
 import javax.persistence.*;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args){
@@ -12,17 +13,17 @@ public class Main {
         try {
             Member member = new Member();
             member.setUsername("doik");
+            member.setAge(10);
             em.persist(member);
 
-//            TypedQuery<Member> query = em.createQuery("select m from Member m", Member.class);
-//            Query query1 = em.createQuery("select m.username, m.age from Member m");
+            em.flush();
+            em.clear();
 
-            Member singleResult = em.createQuery("select m from Member m where m.username like :username", Member.class)
-                    .setParameter("username", "doik")
-                    .getSingleResult();
+            List<Member> result = em.createQuery("select m from Member m", Member.class)
+                    .getResultList();
 
-            System.out.println(singleResult.getUsername());
-
+            Member findMember = result.get(0);
+            findMember.setAge(20);
 
             tx.commit();
         }catch (Exception e){
