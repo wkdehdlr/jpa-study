@@ -11,21 +11,19 @@ public class Main {
         EntityTransaction tx = em.getTransaction();
         tx.begin();
         try {
-            Team team = new Team();
-            team.setName("teamA");
-            em.persist(team);
-
             Member member = new Member();
-            member.setUsername("doik");
-            member.setAge(10);
-            member.changeTeam(team);
+            member.setUsername("doik1");
             em.persist(member);
+
+            Member member1 = new Member();
+            member1.setUsername("doik2");
+            em.persist(member1);
 
             em.flush();
             em.clear();
 
-            String query = "select m FROM Member m JOIN m.team t";
-            List<Member> resultList = em.createQuery(query, Member.class)
+            String query = "select function('group_concat', m.username) FROM Member m";
+            List<String> resultList = em.createQuery(query, String.class)
                     .getResultList();
 
             System.out.println(resultList);
