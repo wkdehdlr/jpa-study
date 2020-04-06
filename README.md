@@ -531,3 +531,16 @@
     - 하이버네이트는 사용전 방언에 추가해야 한다
     - 사용하는 DB 방언을 상속받고, 사용자 정의 함수를 등록한다
     - SELECT function('group_contat', m.username) FROM Member m
+---
+### 경로 표현식
+- 상태필드 : 단순히 값을 저장하기 위한 필드(m.username)
+    - 경로 탐색의 끝, 더이상 탐색 불
+- 연관필드 : 연관관계를 위한 필드
+    - **명시적 조인 사용 권장!!! 묵시적 조인은 쿼리튜닝이 힘듬**
+    - 단일 값 연관 필드 : 대상이 엔티티(m.team) @ManyToOne, @OneToOne가
+        - 묵시적 내부 조인(inner join)발생, 더 탐색 가능
+    - 컬렉션 값 연관 필드 : 대상이 컬렉션(m.orders) @OneToMany, @ManyToMany
+        - 묵시적 내부 조인 발생하지만 컬렉션에서 더 이상 탐색 불가
+        - FROM 절에서 명시적 조인을 통해 별칭을 얻으면 별칭을 통해 탐색 가능
+            - SELECT t.members.username FROM Team t (불가)
+            - SELECT m.username FROM Team t JOIN t.members m
