@@ -33,12 +33,10 @@ public class Main {
             em.clear();
 
             String query = "select m from Member m join fetch m.team";
-            List<Member> resultList = em.createQuery(query, Member.class)
+            List<Member> resultList = em.createNamedQuery("Member.findByUsername", Member.class)
+                    .setParameter("username", "doik2")
                     .getResultList();
 
-            for(Member member2 : resultList){
-                System.out.println(member2.getUsername() + member2.getTeam().getName());
-            }
 
             System.out.println(resultList);
 
